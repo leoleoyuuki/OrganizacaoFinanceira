@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Controle Financeiro</h1>
+    <table id="financeTable">
+      <tr>
+        <th>Descrição</th>
+        <th>Entrada</th>
+        <th>Gasto</th>
+      </tr>
+      <tr>
+        <td>Salário</td>
+        <td><input type="number" id="salario" placeholder="Ex: 2500"></td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Vale Refeição</td>
+        <td><input type="number" id="valeRefeicao" placeholder="Ex: 500"></td>
+        <td><input type="number" id="gastoValeRefeicao" placeholder="Ex: 200"></td>
+      </tr>
+      <tr>
+        <td>Vale Alimentação</td>
+        <td><input type="number" id="valeAlimentacao" placeholder="Ex: 400"></td>
+        <td><input type="number" id="gastoValeAlimentacao" placeholder="Ex: 150"></td>
+      </tr>
+      <tr>
+        <td>Cartão de Crédito</td>
+        <td>-</td>
+        <td><input type="number" id="gastoCartao" placeholder="Ex: 600"></td>
+      </tr>
+      <tr>
+        <td>Gastos com Casa</td>
+        <td>-</td>
+        <td><input type="number" id="gastoCasa" placeholder="Ex: 700"></td>
+      </tr>
+      <tr>
+        <td>Lazer</td>
+        <td>-</td>
+        <td><input type="number" id="gastoLazer" placeholder="Ex: 300"></td>
+      </tr>
+      <tr>
+        <td><strong>Saldo Final</strong></td>
+        <td colspan="2" id="saldoFinal">0</td>
+      </tr>
+    </table>
+    <button onclick="calcularSaldo()">Calcular Saldo</button>
+    <h2>Gráficos de Gastos</h2>
+    <canvas id="gastosChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
